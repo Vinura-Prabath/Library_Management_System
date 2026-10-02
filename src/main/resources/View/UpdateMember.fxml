@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="btnCancel" onDragDetected="#btnCancelOnAction" prefHeight="400.0" prefWidth="426.0" style="-fx-background-color: #B6CBD6;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.UpdateMemberController">
+   <children>
+      <Label layoutX="80.0" layoutY="101.0" text="Name :" />
+      <Label layoutX="80.0" layoutY="143.0" text="Email :" />
+      <Label layoutX="80.0" layoutY="182.0" text="Contact :" />
+      <Label layoutX="80.0" layoutY="223.0" text="Address :" />
+      <Button fx:id="btnSave" layoutX="68.0" layoutY="283.0" mnemonicParsing="false" onAction="#btnSaveOnAction" text="Save" />
+      <Button layoutX="301.0" layoutY="283.0" mnemonicParsing="false" text="Cancel" />
+      <TextField fx:id="txtName" layoutX="151.0" layoutY="97.0" />
+      <TextField fx:id="txtEmail" layoutX="151.0" layoutY="139.0" />
+      <TextField fx:id="txtContact" layoutX="151.0" layoutY="178.0" />
+      <TextField fx:id="txtAddress" layoutX="151.0" layoutY="219.0" />
+      <Label layoutX="135.0" layoutY="33.0" text="Update Member">
+         <font>
+            <Font name="Bernard MT Condensed" size="26.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
