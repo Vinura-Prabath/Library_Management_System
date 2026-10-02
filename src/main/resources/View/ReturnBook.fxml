@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ReturnBookController">
+   <children>
+      <Label layoutX="216.0" layoutY="29.0" text="Return Book">
+         <font>
+            <Font name="Bernard MT Condensed" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="60.0" layoutY="120.0" text="Select Borrowed Record :" />
+      <ComboBox fx:id="cmbBorrowedBooks" layoutX="215.0" layoutY="116.0" prefHeight="26.0" prefWidth="175.0" />
+      <Label layoutX="60.0" layoutY="164.0" text="Member Info :" />
+      <Label layoutX="66.0" layoutY="329.0" text="Status :" />
+      <Label layoutX="60.0" layoutY="200.0" text="Borrowed Date :" />
+      <Label layoutX="60.0" layoutY="239.0" text="Due Date :" />
+      <Label layoutX="63.0" layoutY="281.0" text="Return Date :" />
+      <TextField fx:id="txtMemberInfo" layoutX="214.0" layoutY="160.0" prefHeight="26.0" prefWidth="175.0" />
+      <DatePicker fx:id="dpBorrowedDate" layoutX="212.0" layoutY="196.0" />
+      <DatePicker fx:id="dpDueDate" layoutX="212.0" layoutY="235.0" />
+      <DatePicker fx:id="dpReturnDate" layoutX="212.0" layoutY="277.0" />
+      <Label fx:id="lblOverdueStatus" layoutX="212.0" layoutY="329.0" text="Overdue Status" />
+      <Button fx:id="btnReturnBook" layoutX="469.0" layoutY="151.0" mnemonicParsing="false" onAction="#btnReturnBookOnAction" prefHeight="26.0" prefWidth="116.0" text="Return Book" />
+      <Button fx:id="btnClear" layoutX="471.0" layoutY="196.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="26.0" prefWidth="116.0" text="Clear" />
+      <Button fx:id="btnBackDashboard" layoutX="472.0" layoutY="235.0" mnemonicParsing="false" onAction="#btnBackDashboardOnAction" text="Back to Dashboard" />
+   </children>
+</AnchorPane>

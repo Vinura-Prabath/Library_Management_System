@@ -27,4 +27,9 @@ public class BorrowRecord {
     public void setReturnDate(LocalDate returnDate) { this.returnDate = returnDate; }
     public String getStatus() { return status; }
     public void setStatus(String status) { this.status = status; }
+
+    @Override
+    public String toString() {
+        return memberId + " - " + bookTitle;
+    }
 }
