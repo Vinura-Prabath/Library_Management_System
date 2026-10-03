@@ -5,24 +5,47 @@
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.IssueBookController">
+<AnchorPane prefHeight="400.0" prefWidth="747.0" style="-fx-background-color: #d5dbc7;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.IssueBookController">
    <children>
-      <Button fx:id="btnIssueBook" layoutX="102.0" layoutY="317.0" mnemonicParsing="false" onAction="#btnIssueBookOnAction" text="Issue Book" />
-      <Button fx:id="btnClear" layoutX="436.0" layoutY="317.0" mnemonicParsing="false" onAction="#btnClearOnAction" text="Clear" />
-      <ComboBox fx:id="cmbMember" layoutX="160.0" layoutY="90.0" prefWidth="150.0" />
-      <ComboBox fx:id="cmbBook" layoutX="160.0" layoutY="138.0" prefWidth="150.0" />
-      <DatePicker fx:id="dpIssueDate" layoutX="160.0" layoutY="187.0" />
-      <DatePicker fx:id="dpDueDate" layoutX="160.0" layoutY="236.0" />
-      <Label layoutX="60.0" layoutY="94.0" text="Select Member :" />
-      <Label layoutX="60.0" layoutY="142.0" text="Select Book :" />
-      <Label layoutX="60.0" layoutY="191.0" text="Issue Date :" />
-      <Label layoutX="64.0" layoutY="240.0" text="Due Date :" />
-      <Label layoutX="248.0" layoutY="24.0" text="Issue Book">
-         <font>
-            <Font name="Bernard MT Condensed" size="31.0" />
-         </font>
-      </Label>
+      <Button fx:id="btnIssueBook" layoutX="450.0" layoutY="177.0" mnemonicParsing="false" onAction="#btnIssueBookOnAction" prefHeight="26.0" prefWidth="113.0" text="Issue Book" />
+      <Button fx:id="btnClear" layoutX="459.0" layoutY="240.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="26.0" prefWidth="95.0" text="Clear" />
+      <ComboBox fx:id="cmbMember" layoutX="160.0" layoutY="111.0" prefHeight="26.0" prefWidth="175.0" />
+      <ComboBox fx:id="cmbBook" layoutX="160.0" layoutY="177.0" prefHeight="26.0" prefWidth="175.0" />
+      <DatePicker fx:id="dpIssueDate" layoutX="160.0" layoutY="249.0" />
+      <DatePicker fx:id="dpDueDate" layoutX="160.0" layoutY="320.0" />
+      <Label layoutX="52.0" layoutY="116.0" text="Select Member :" />
+      <Label layoutX="52.0" layoutY="181.0" text="Select Book :" />
+      <Label layoutX="56.0" layoutY="253.0" text="Issue Date :" />
+      <Label layoutX="58.0" layoutY="324.0" text="Due Date :" />
+      <AnchorPane layoutX="-7.0" prefHeight="78.0" prefWidth="754.0" style="-fx-background-color: #163A48;">
+         <children>
+            <Label layoutX="285.0" layoutY="19.0" text="Issue Book Page">
+               <font>
+                  <Font name="Bernard MT Condensed" size="31.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.6357114911079407" green="0.3142300248146057" blue="0.6526315808296204" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

@@ -9,27 +9,39 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="541.0" prefWidth="839.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DashboardController">
+<AnchorPane prefHeight="548.0" prefWidth="856.0" style="-fx-background-color: #d5dbc7;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DashboardController">
    <children>
-      <BorderPane layoutX="-3.0" layoutY="-2.0" prefHeight="547.0" prefWidth="848.0" stylesheets="@../Style/style.css">
-         <top>
-            <Label text="Main Dashboard" BorderPane.alignment="CENTER">
-               <font>
-                  <Font name="Bernard MT Condensed" size="38.0" />
-               </font>
-            </Label>
-         </top>
+      <BorderPane layoutX="-3.0" layoutY="66.0" prefHeight="480.0" prefWidth="848.0" stylesheets="@../Style/style.css">
          <left>
             <VBox prefHeight="460.0" prefWidth="200.0" spacing="10.0" styleClass="sidebar" BorderPane.alignment="CENTER">
                <children>
-                  <AnchorPane prefHeight="86.0" prefWidth="166.0">
+                  <AnchorPane prefHeight="113.0" prefWidth="200.0">
                      <children>
-                        <Label layoutX="28.0" layoutY="23.0" text="📚 Library Management &#10;               System" textFill="#faf9f9">
+                        <Label layoutX="13.0" layoutY="14.0" prefHeight="82.0" prefWidth="159.0" text="📚 Library Management &#10;               System">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
+                           <textFill>
+                              <RadialGradient centerX="1.0" centerY="1.0" focusDistance="1.0" radius="0.1422018151764476">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </RadialGradient>
+                           </textFill>
                         </Label>
                      </children>
                   </AnchorPane>
@@ -46,7 +58,7 @@
          <center>
             <StackPane fx:id="contentArea" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <GridPane hgap="20.0" vgap="20.0" StackPane.alignment="CENTER">
+                  <GridPane hgap="20.0" prefHeight="418.0" prefWidth="498.0" vgap="20.0" StackPane.alignment="CENTER">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -57,28 +69,52 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <VBox prefHeight="200.0" prefWidth="100.0" styleClass="card">
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #1D4ED8;" styleClass="card">
                            <children>
-                              <Label text="Total Books" />
-                              <Label fx:id="lblTotalBooks" text="1250" />
+                              <Label text="Total Books">
+                                 <font>
+                                    <Font name="Bernard MT Condensed" size="18.0" />
+                                 </font></Label>
+                              <Label fx:id="lblTotalBooks" text="0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
                            </children>
                         </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" styleClass="card" GridPane.columnIndex="1">
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #10B981;" styleClass="card" GridPane.columnIndex="1">
                            <children>
-                              <Label text="Total Members" />
-                              <Label fx:id="lblTotalMembers" text="582" />
+                              <Label text="Total Members">
+                                 <font>
+                                    <Font name="Bernard MT Condensed" size="18.0" />
+                                 </font></Label>
+                              <Label fx:id="lblTotalMembers" text="0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
                            </children>
                         </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" styleClass="card" GridPane.rowIndex="1">
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #8B5CF6;" styleClass="card" GridPane.rowIndex="1">
                            <children>
-                              <Label text="Currently Borrowed" />
-                              <Label fx:id="lblCurrentlyBorrowed" text="143" />
+                              <Label text="Currently Borrowed">
+                                 <font>
+                                    <Font name="Bernard MT Condensed" size="18.0" />
+                                 </font></Label>
+                              <Label fx:id="lblCurrentlyBorrowed" text="0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
                            </children>
                         </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" styleClass="card" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #EF4444;" styleClass="card" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <children>
-                              <Label text="Overdue Books" />
-                              <Label fx:id="lblOverdueBooks" text="17" />
+                              <Label text="Overdue Books">
+                                 <font>
+                                    <Font name="Bernard MT Condensed" size="18.0" />
+                                 </font></Label>
+                              <Label fx:id="lblOverdueBooks" text="0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
                            </children>
                         </VBox>
                      </children>
@@ -87,5 +123,14 @@
             </StackPane>
          </center>
       </BorderPane>
+      <AnchorPane layoutX="-3.0" layoutY="-2.0" prefHeight="60.0" prefWidth="922.0" style="-fx-background-color: #163A48;">
+         <children>
+            <Label layoutX="365.0" layoutY="6.0" text="Main Dashboard" textFill="WHITE">
+               <font>
+                  <Font name="Bernard MT Condensed" size="38.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

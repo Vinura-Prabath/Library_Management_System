@@ -5,29 +5,51 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #B6CBD6;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AddBookController">
+<AnchorPane prefHeight="400.0" prefWidth="740.0" style="-fx-background-color: #d5dbc7;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AddBookController">
    <children>
-      <Label layoutX="198.0" layoutY="20.0" text="Add New Book">
-         <font>
-            <Font name="Bernard MT Condensed" size="37.0" />
-         </font>
-      </Label>
-      <Label layoutX="92.0" layoutY="102.0" text="Book ID :" />
-      <Label layoutX="89.0" layoutY="145.0" text="Book Title :" />
-      <Label layoutX="87.0" layoutY="191.0" text="Author :" />
-      <Label layoutX="87.0" layoutY="236.0" text="Category :" />
-      <ComboBox fx:id="cmbCategory" layoutX="171.0" layoutY="231.0" prefHeight="26.0" prefWidth="280.0" />
-      <TextField fx:id="txtID" layoutX="169.0" layoutY="98.0" prefHeight="26.0" prefWidth="280.0" />
-      <TextField fx:id="txtBookTitle" layoutX="171.0" layoutY="140.0" prefHeight="26.0" prefWidth="280.0" />
-      <TextField fx:id="txtAuthor" layoutX="169.0" layoutY="186.0" prefHeight="26.0" prefWidth="280.0" />
-      <Button fx:id="btnSave" layoutX="88.0" layoutY="356.0" mnemonicParsing="false" onAction="#btnSaveOnAction" text="Save" />
-      <Button fx:id="btnClear" layoutX="207.0" layoutY="357.0" mnemonicParsing="false" onAction="#btnClearOnAction" text="Clear" />
-      <TextField fx:id="txtQuantity" layoutX="169.0" layoutY="303.0" prefHeight="26.0" prefWidth="280.0" />
-      <Label layoutX="82.0" layoutY="308.0" text="Quantity :" />
-      <Button fx:id="btnBack" layoutX="341.0" layoutY="356.0" mnemonicParsing="false" onAction="#btnBackOnAction" text="Back To Dashboard" />
-      <Label layoutX="87.0" layoutY="276.0" text="Published Year :" />
-      <TextField fx:id="txtPublishedYear" layoutX="179.0" layoutY="271.0" prefHeight="26.0" prefWidth="280.0" />
+      <Label layoutX="78.0" layoutY="88.0" text="Book ID :" />
+      <Label layoutX="78.0" layoutY="142.0" text="Book Title :" />
+      <Label layoutX="74.0" layoutY="204.0" text="Author :" />
+      <Label layoutX="70.0" layoutY="253.0" text="Category :" />
+      <ComboBox fx:id="cmbCategory" layoutX="187.0" layoutY="248.0" prefHeight="26.0" prefWidth="280.0" />
+      <TextField fx:id="txtID" layoutX="187.0" layoutY="83.0" prefHeight="26.0" prefWidth="280.0" />
+      <TextField fx:id="txtBookTitle" layoutX="187.0" layoutY="138.0" prefHeight="26.0" prefWidth="280.0" />
+      <TextField fx:id="txtAuthor" layoutX="187.0" layoutY="199.0" prefHeight="26.0" prefWidth="280.0" />
+      <Button fx:id="btnSave" layoutX="557.0" layoutY="177.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="26.0" prefWidth="98.0" text="Save" />
+      <Button fx:id="btnClear" layoutX="557.0" layoutY="240.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="26.0" prefWidth="98.0" text="Clear" />
+      <TextField fx:id="txtQuantity" layoutX="187.0" layoutY="354.0" prefHeight="26.0" prefWidth="280.0" />
+      <Label layoutX="67.0" layoutY="358.0" text="Quantity :" />
+      <Label layoutX="66.0" layoutY="305.0" text="Published Year :" />
+      <TextField fx:id="txtPublishedYear" layoutX="187.0" layoutY="300.0" prefHeight="26.0" prefWidth="280.0" />
+      <AnchorPane prefHeight="71.0" prefWidth="747.0" style="-fx-background-color: #163A48;">
+         <children>
+            <Label layoutX="318.0" layoutY="21.0" text="Add New Book">
+               <font>
+                  <Font name="Bernard MT Condensed" size="24.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.8138694167137146" green="0.4773879051208496" blue="0.8315789699554443" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

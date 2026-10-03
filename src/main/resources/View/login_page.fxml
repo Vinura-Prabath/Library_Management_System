@@ -8,21 +8,21 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.RadialGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="383.0" prefWidth="565.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LoginPageController">
+<AnchorPane prefHeight="348.0" prefWidth="530.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LoginPageController">
    <children>
-      <ImageView fitHeight="383.0" fitWidth="625.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="383.0" fitWidth="539.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../img/anime-style-cozy-home-interior-with-furnishings.jpg" />
+            <Image url="@../img/img01.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="158.0" layoutY="26.0" text="Login Page">
+      <Label layoutX="192.0" layoutY="14.0" text="Login Page">
          <font>
-            <Font name="Bernard MT Condensed" size="60.0" />
+            <Font name="Bernard MT Condensed" size="36.0" />
          </font>
          <textFill>
             <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
@@ -41,22 +41,59 @@
             </RadialGradient>
          </textFill>
       </Label>
-      <Label layoutX="43.0" layoutY="147.0" text="User Name :" textFill="#faf7f7">
+      <Label layoutX="29.0" layoutY="185.0" text="User Name :">
          <font>
             <Font name="Bernard MT Condensed" size="20.0" />
          </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.831315815448761" green="0.5968421101570129" blue="0.8526315689086914" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
       </Label>
-      <Label layoutX="43.0" layoutY="205.0" text="Password :" textFill="#faf7f7">
+      <Label layoutX="31.0" layoutY="255.0" text="Password :">
          <font>
             <Font name="Bernard MT Condensed" size="20.0" />
          </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.6541390419006348" green="0.45867446064949036" blue="0.6842105388641357" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
       </Label>
-      <TextField fx:id="txtUserName" layoutX="152.0" layoutY="148.0" prefHeight="26.0" prefWidth="270.0" />
-      <Button fx:id="btnLogin" layoutX="190.0" layoutY="289.0" mnemonicParsing="false" onAction="#btnLogingOnAction" prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: #0000FF;" text="LOG IN" textFill="WHITE">
+      <TextField fx:id="txtUserName" layoutX="145.0" layoutY="185.0" prefHeight="26.0" prefWidth="270.0" promptText="Enter Username" />
+      <PasswordField fx:id="txtPassword" layoutX="145.0" layoutY="255.0" prefHeight="26.0" prefWidth="270.0" promptText="Enter Password" />
+      <ImageView fitHeight="100.0" fitWidth="145.0" layoutX="227.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/login.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnLogin" layoutX="192.0" layoutY="315.0" mnemonicParsing="false" onAction="#btnLogingOnAction" prefHeight="24.0" prefWidth="134.0" style="-fx-background-color: #008080;" text="Log In" textFill="WHITE">
          <font>
-            <Font name="Bernard MT Condensed" size="18.0" />
+            <Font name="Bernard MT Condensed" size="14.0" />
          </font>
       </Button>
-      <PasswordField fx:id="txtPassword" layoutX="152.0" layoutY="206.0" prefHeight="26.0" prefWidth="270.0" />
    </children>
 </AnchorPane>

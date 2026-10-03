@@ -4,25 +4,47 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane fx:id="btnCancel" onDragDetected="#btnCancelOnAction" prefHeight="400.0" prefWidth="426.0" style="-fx-background-color: #B6CBD6;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.UpdateMemberController">
+<AnchorPane fx:id="btnCancel" onDragDetected="#btnCancelOnAction" prefHeight="400.0" prefWidth="426.0" style="-fx-background-color: #d5dbc7;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.UpdateMemberController">
    <children>
       <Label layoutX="80.0" layoutY="101.0" text="Name :" />
-      <Label layoutX="80.0" layoutY="143.0" text="Email :" />
-      <Label layoutX="80.0" layoutY="182.0" text="Contact :" />
-      <Label layoutX="80.0" layoutY="223.0" text="Address :" />
-      <Button fx:id="btnSave" layoutX="68.0" layoutY="283.0" mnemonicParsing="false" onAction="#btnSaveOnAction" text="Save" />
-      <Button layoutX="301.0" layoutY="283.0" mnemonicParsing="false" text="Cancel" />
+      <Label layoutX="81.0" layoutY="156.0" text="Email :" />
+      <Label layoutX="79.0" layoutY="212.0" text="Contact :" />
+      <Label layoutX="79.0" layoutY="269.0" text="Address :" />
+      <Button fx:id="btnSave" layoutX="18.0" layoutY="323.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="26.0" prefWidth="122.0" text="Save" />
+      <Button layoutX="287.0" layoutY="323.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="114.0" text="Cancel" />
       <TextField fx:id="txtName" layoutX="151.0" layoutY="97.0" />
-      <TextField fx:id="txtEmail" layoutX="151.0" layoutY="139.0" />
-      <TextField fx:id="txtContact" layoutX="151.0" layoutY="178.0" />
-      <TextField fx:id="txtAddress" layoutX="151.0" layoutY="219.0" />
-      <Label layoutX="135.0" layoutY="33.0" text="Update Member">
-         <font>
-            <Font name="Bernard MT Condensed" size="26.0" />
-         </font>
-      </Label>
+      <TextField fx:id="txtEmail" layoutX="151.0" layoutY="152.0" />
+      <TextField fx:id="txtContact" layoutX="151.0" layoutY="208.0" />
+      <TextField fx:id="txtAddress" layoutX="151.0" layoutY="265.0" />
+      <AnchorPane prefHeight="78.0" prefWidth="426.0" style="-fx-background-color: #163A48;">
+         <children>
+            <Label layoutX="147.0" layoutY="26.0" text="Update Member">
+               <font>
+                  <Font name="Bernard MT Condensed" size="26.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.6785087585449219" green="0.34210526943206787" blue="0.6842105388641357" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

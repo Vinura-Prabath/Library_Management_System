@@ -6,30 +6,51 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ReturnBookController">
+<AnchorPane prefHeight="459.0" prefWidth="793.0" style="-fx-background-color: #d5dbc7;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ReturnBookController">
    <children>
-      <Label layoutX="216.0" layoutY="29.0" text="Return Book">
-         <font>
-            <Font name="Bernard MT Condensed" size="30.0" />
-         </font>
-      </Label>
-      <Label layoutX="60.0" layoutY="120.0" text="Select Borrowed Record :" />
-      <ComboBox fx:id="cmbBorrowedBooks" layoutX="215.0" layoutY="116.0" prefHeight="26.0" prefWidth="175.0" />
-      <Label layoutX="60.0" layoutY="164.0" text="Member Info :" />
-      <Label layoutX="66.0" layoutY="329.0" text="Status :" />
-      <Label layoutX="60.0" layoutY="200.0" text="Borrowed Date :" />
-      <Label layoutX="60.0" layoutY="239.0" text="Due Date :" />
-      <Label layoutX="63.0" layoutY="281.0" text="Return Date :" />
-      <TextField fx:id="txtMemberInfo" layoutX="214.0" layoutY="160.0" prefHeight="26.0" prefWidth="175.0" />
-      <DatePicker fx:id="dpBorrowedDate" layoutX="212.0" layoutY="196.0" />
-      <DatePicker fx:id="dpDueDate" layoutX="212.0" layoutY="235.0" />
-      <DatePicker fx:id="dpReturnDate" layoutX="212.0" layoutY="277.0" />
-      <Label fx:id="lblOverdueStatus" layoutX="212.0" layoutY="329.0" text="Overdue Status" />
-      <Button fx:id="btnReturnBook" layoutX="469.0" layoutY="151.0" mnemonicParsing="false" onAction="#btnReturnBookOnAction" prefHeight="26.0" prefWidth="116.0" text="Return Book" />
-      <Button fx:id="btnClear" layoutX="471.0" layoutY="196.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="26.0" prefWidth="116.0" text="Clear" />
-      <Button fx:id="btnBackDashboard" layoutX="472.0" layoutY="235.0" mnemonicParsing="false" onAction="#btnBackDashboardOnAction" text="Back to Dashboard" />
+      <Label layoutX="76.0" layoutY="96.0" text="Select Borrowed Record :" />
+      <ComboBox fx:id="cmbBorrowedBooks" layoutX="239.0" layoutY="91.0" prefHeight="26.0" prefWidth="175.0" />
+      <Label layoutX="76.0" layoutY="167.0" text="Member Info :" />
+      <Label layoutX="73.0" layoutY="423.0" text="Status :" />
+      <Label layoutX="76.0" layoutY="235.0" text="Borrowed Date :" />
+      <Label layoutX="76.0" layoutY="302.0" text="Due Date :" />
+      <Label layoutX="73.0" layoutY="365.0" text="Return Date :" />
+      <TextField fx:id="txtMemberInfo" layoutX="238.0" layoutY="171.0" prefHeight="26.0" prefWidth="175.0" />
+      <DatePicker fx:id="dpBorrowedDate" layoutX="239.0" layoutY="231.0" />
+      <DatePicker fx:id="dpDueDate" layoutX="238.0" layoutY="298.0" />
+      <DatePicker fx:id="dpReturnDate" layoutX="238.0" layoutY="361.0" />
+      <Label fx:id="lblOverdueStatus" layoutX="265.0" layoutY="423.0" text="Overdue Status" />
+      <Button fx:id="btnReturnBook" layoutX="579.0" layoutY="197.0" mnemonicParsing="false" onAction="#btnReturnBookOnAction" prefHeight="26.0" prefWidth="116.0" text="Return Book" />
+      <Button fx:id="btnClear" layoutX="579.0" layoutY="271.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="26.0" prefWidth="116.0" text="Clear" />
+      <AnchorPane layoutX="-7.0" layoutY="-2.0" prefHeight="66.0" prefWidth="806.0" style="-fx-background-color: #163A48;">
+         <children>
+            <Label layoutX="330.0" layoutY="14.0" text="Return Book Page">
+               <font>
+                  <Font name="Bernard MT Condensed" size="30.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.7995191812515259" green="0.48031190037727356" blue="0.8105263113975525" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

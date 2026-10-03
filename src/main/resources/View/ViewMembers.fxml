@@ -6,19 +6,17 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #B6CBD6;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ViewMembersController">
+<AnchorPane prefHeight="400.0" prefWidth="739.0" style="-fx-background-color: #d5dbc7;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ViewMembersController">
    <children>
-      <Label layoutX="174.0" layoutY="22.0" text="View Members">
-         <font>
-            <Font name="System Bold" size="36.0" />
-         </font>
-      </Label>
-      <Button fx:id="btnSearch" layoutX="278.0" layoutY="110.0" mnemonicParsing="false" onAction="#btnSearchOnAction" text="Search 🔎" />
-      <Button fx:id="btnRefresh" layoutX="360.0" layoutY="110.0" mnemonicParsing="false" onAction="#btnRefreshOnAction" text="Refresh" />
+      <Button fx:id="btnSearch" layoutX="302.0" layoutY="109.0" mnemonicParsing="false" onAction="#btnSearchOnAction" prefHeight="26.0" prefWidth="108.0" text="Search 🔎" />
+      <Button fx:id="btnRefresh" layoutX="551.0" layoutY="109.0" mnemonicParsing="false" onAction="#btnRefreshOnAction" prefHeight="26.0" prefWidth="116.0" text="Refresh" />
       <TextField fx:id="txtSearch" layoutX="30.0" layoutY="109.0" prefHeight="26.0" prefWidth="229.0" promptText="Search by Name or ID" />
-      <TableView fx:id="tblMembers" layoutX="30.0" layoutY="163.0" prefHeight="200.0" prefWidth="379.0">
+      <TableView fx:id="tblMembers" layoutX="30.0" layoutY="163.0" prefHeight="200.0" prefWidth="380.0">
         <columns>
           <TableColumn fx:id="colID" prefWidth="75.0" text="Member ID" />
           <TableColumn fx:id="colName" prefWidth="75.0" text="Name" />
@@ -27,9 +25,34 @@
             <TableColumn fx:id="colAddress" prefWidth="75.0" text="Address" />
         </columns>
       </TableView>
-      <Button fx:id="btnAddMember" layoutX="465.0" layoutY="174.0" mnemonicParsing="false" onAction="#btnAddMemberOnAction" prefHeight="26.0" prefWidth="116.0" text="Add Member" />
-      <Button fx:id="btnUpdateMember" layoutX="465.0" layoutY="215.0" mnemonicParsing="false" onAction="#btnUpdateMemberOnAction" prefHeight="26.0" prefWidth="116.0" text="Update Member" />
-      <Button fx:id="btnDelete" layoutX="465.0" layoutY="255.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="26.0" prefWidth="116.0" text="Delete Member" />
-      <Button fx:id="btnBack" layoutX="465.0" layoutY="299.0" mnemonicParsing="false" onAction="#btnBackOnAction" text="Back to Dashboard" />
+      <Button fx:id="btnAddMember" layoutX="551.0" layoutY="173.0" mnemonicParsing="false" onAction="#btnAddMemberOnAction" prefHeight="26.0" prefWidth="116.0" text="Add Member" />
+      <Button fx:id="btnUpdateMember" layoutX="551.0" layoutY="236.0" mnemonicParsing="false" onAction="#btnUpdateMemberOnAction" prefHeight="26.0" prefWidth="116.0" text="Update Member" />
+      <Button fx:id="btnDelete" layoutX="551.0" layoutY="288.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="26.0" prefWidth="116.0" text="Delete Member" />
+      <Button fx:id="btnBack" layoutX="551.0" layoutY="350.0" mnemonicParsing="false" onAction="#btnBackOnAction" text="Back to Dashboard" />
+      <AnchorPane layoutX="-2.0" layoutY="1.0" prefHeight="74.0" prefWidth="746.0" style="-fx-background-color: #163A48;">
+         <children>
+            <Label layoutX="281.0" layoutY="18.0" text="View Members Page">
+               <font>
+                  <Font name="Bernard MT Condensed" size="30.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.6159571409225464" green="0.26502925157546997" blue="0.6947368383407593" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

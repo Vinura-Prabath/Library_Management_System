@@ -3,26 +3,52 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.BorrowHistoryController">
-   <children>
-      <Label layoutX="191.0" layoutY="29.0" text="Borrowing History">
-         <font>
-            <Font name="Bernard MT Condensed" size="31.0" />
-         </font>
-      </Label>
-      <TableView fx:id="tblBorrowHistory" layoutX="32.0" layoutY="100.0" prefHeight="200.0" prefWidth="450.0">
-        <columns>
-          <TableColumn fx:id="colMemberId" prefWidth="75.0" text="Member ID" />
-          <TableColumn fx:id="colBookTitle" prefWidth="75.0" text="Book Title" />
-            <TableColumn fx:id="colIssueDate" prefWidth="75.0" text="Issue Date" />
-            <TableColumn fx:id="colDueDate" prefWidth="75.0" text="Due Date" />
-            <TableColumn fx:id="colReturnDate" prefWidth="75.0" text="Return Date" />
-            <TableColumn fx:id="colStatus" prefWidth="75.0" text="Status" />
-        </columns>
-      </TableView>
-   </children>
+<AnchorPane prefHeight="400.0" prefWidth="770.0" style="-fx-background-color: #d5dbc7;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.BorrowHistoryController">
+    <children>
+        <TableView fx:id="tblBorrowHistory" layoutX="159.0" layoutY="133.0" prefHeight="200.0" prefWidth="450.0">
+            <columns>
+                <TableColumn fx:id="colMemberId" prefWidth="75.0" text="Member ID" />
+                <TableColumn fx:id="colBookTitle" prefWidth="75.0" text="Book Title" />
+                <TableColumn fx:id="colIssueDate" prefWidth="75.0" text="Issue Date" />
+                <TableColumn fx:id="colDueDate" prefWidth="75.0" text="Due Date" />
+                <TableColumn fx:id="colReturnDate" prefWidth="75.0" text="Return Date" />
+                <TableColumn fx:id="colStatus" prefWidth="75.0" text="Status" />
+            </columns>
+            <effect>
+                <DropShadow />
+            </effect>
+        </TableView>
+        <AnchorPane prefHeight="67.0" prefWidth="770.0" style="-fx-background-color: #163A48;">
+            <children>
+                <Label layoutX="257.0" layoutY="14.0" text="Borrowing History Page">
+                    <font>
+                        <Font name="Bernard MT Condensed" size="31.0" />
+                    </font>
+                    <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color red="0.7321150302886963" green="0.47660818696022034" blue="0.7894737124443054" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color red="1.0" green="1.0" blue="1.0" />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </textFill>
+                </Label>
+            </children>
+        </AnchorPane>
+    </children>
 </AnchorPane>
